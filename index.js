@@ -1,4 +1,5 @@
 const fetch = require("node-fetch");
+const { Float16Array } = require("@petamoriken/float16");
 
 class npyjs {
 
@@ -56,15 +57,20 @@ class npyjs {
                 size: 64,
                 arrayConstructor: BigInt64Array,
             },
+            "<f2": {
+                name: "float16",
+                size: 16,
+                arrayConstructor: Float16Array,
+            },
             "<f4": {
                 name: "float32",
                 size: 32,
-                arrayConstructor: Float32Array
+                arrayConstructor: Float32Array,
             },
             "<f8": {
                 name: "float64",
                 size: 64,
-                arrayConstructor: Float64Array
+                arrayConstructor: Float64Array,
             },
         };
     }
